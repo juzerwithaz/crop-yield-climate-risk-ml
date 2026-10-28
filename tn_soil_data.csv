@@ -1,0 +1,32 @@
+District,Zone,pH,N (kg/ha),P (kg/ha),K (kg/ha),Confidence
+Ariyalur,Cauvery Delta,7.85,250.0,20.0,300.0,zone-avg
+Coimbatore,Western,7.82,333.5,30.2,347.5,real
+Cuddalore,North Eastern,6.56,236.5,29.0,518.0,real
+Dharmapuri,North Western,7.8,190.2,37.9,335.5,zone-avg
+Dindigul,Western,7.42,272.0,24.8,241.4,zone-avg
+Erode,Western,8.27,425.0,38.5,270.0,real
+Kanchipuram,North Eastern,6.56,236.5,29.0,518.0,zone-avg
+Kanniyakumari,High Rainfall,7.28,227.0,15.8,382.5,low-confidence
+Karur,Western,7.42,272.0,24.8,241.4,zone-avg
+Krishnagiri,North Western,7.69,238.0,24.8,177.0,real
+Madurai,Southern,7.6,205.0,16.0,300.0,real
+Nagapattinam,Cauvery Delta,7.85,250.0,20.0,300.0,zone-avg
+Namakkal,North Western,7.8,190.2,37.9,335.5,zone-avg
+Perambalur,Cauvery Delta,7.85,250.0,20.0,300.0,zone-avg
+Pudukkottai,Cauvery Delta,7.85,250.0,20.0,300.0,zone-avg
+Ramanathapuram,Southern,7.28,227.0,15.8,382.5,zone-avg
+Salem,North Western,7.91,142.5,51.0,494.0,real
+Sivaganga,Southern,7.28,227.0,15.8,382.5,zone-avg
+Thanjavur,Cauvery Delta,7.85,250.0,20.0,300.0,real
+The Nilgiris,High Altitude/Hills,7.42,272.0,24.8,241.4,low-confidence
+Theni,Western,6.09,189.5,13.8,123.0,real
+Thiruvallur,North Eastern,6.56,236.5,29.0,518.0,zone-avg
+Thiruvarur,Cauvery Delta,7.85,250.0,20.0,300.0,zone-avg
+Tiruchirappalli,Cauvery Delta,7.85,250.0,20.0,300.0,zone-avg
+Tirunelveli,Southern,7.28,227.0,15.8,382.5,zone-avg
+Tiruppur,Western,7.5,140.0,16.5,225.0,real
+Tiruvannamalai,North Eastern,6.56,236.5,29.0,518.0,zone-avg
+Tuticorin,Southern,7.28,227.0,15.8,382.5,zone-avg
+Vellore,North Eastern,6.56,236.5,29.0,518.0,zone-avg
+Villupuram,North Eastern,6.56,236.5,29.0,518.0,zone-avg
+Virudhunagar,Southern,6.95,249.0,15.5,465.0,real
