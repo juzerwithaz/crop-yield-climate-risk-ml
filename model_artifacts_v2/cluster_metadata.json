@@ -1,0 +1,701 @@
+{
+  "n_clusters": 4,
+  "features": [
+    "Rainfall",
+    "Temp",
+    "Humidity",
+    "pH",
+    "N",
+    "P",
+    "K"
+  ],
+  "cluster_names": {
+    "0": "Central & Delta Semi-Arid Plains",
+    "1": "Western Ghats & Highland Agro-Zone",
+    "2": "North-Western Plateau",
+    "3": "Coastal Humid Plain"
+  },
+  "cluster_profiles": {
+    "0": {
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "district_count": 13,
+      "districts": [
+        "ARIYALUR",
+        "DINDIGUL",
+        "ERODE",
+        "KARUR",
+        "MADURAI",
+        "NAGAPATTINAM",
+        "PERAMBALUR",
+        "PUDUKKOTTAI",
+        "SIVAGANGA",
+        "THANJAVUR",
+        "THIRUVARUR",
+        "TIRUCHIRAPPALLI",
+        "TIRUPPUR"
+      ],
+      "soil_confidence_breakdown": {
+        "zone-avg": 9,
+        "real": 4
+      },
+      "climate_soil_means": {
+        "Rainfall": 878.26,
+        "Temp": 27.59,
+        "Humidity": 69.23,
+        "pH": 7.73,
+        "N": 253.15,
+        "P": 21.26,
+        "K": 289.25
+      },
+      "latitude_mean": 10.7226,
+      "longitude_mean": 78.6017
+    },
+    "1": {
+      "cluster_id": 1,
+      "cluster_name": "Western Ghats & Highland Agro-Zone",
+      "district_count": 4,
+      "districts": [
+        "COIMBATORE",
+        "KRISHNAGIRI",
+        "THE NILGIRIS",
+        "THENI"
+      ],
+      "soil_confidence_breakdown": {
+        "real": 3,
+        "low-confidence": 1
+      },
+      "climate_soil_means": {
+        "Rainfall": 1066.56,
+        "Temp": 23.96,
+        "Humidity": 73.43,
+        "pH": 7.26,
+        "N": 258.25,
+        "P": 23.4,
+        "K": 222.22
+      },
+      "latitude_mean": 11.2381,
+      "longitude_mean": 77.3349
+    },
+    "2": {
+      "cluster_id": 2,
+      "cluster_name": "North-Western Plateau",
+      "district_count": 3,
+      "districts": [
+        "DHARMAPURI",
+        "NAMAKKAL",
+        "SALEM"
+      ],
+      "soil_confidence_breakdown": {
+        "zone-avg": 2,
+        "real": 1
+      },
+      "climate_soil_means": {
+        "Rainfall": 850.87,
+        "Temp": 26.59,
+        "Humidity": 67.74,
+        "pH": 7.84,
+        "N": 174.3,
+        "P": 42.27,
+        "K": 388.33
+      },
+      "latitude_mean": 11.6703,
+      "longitude_mean": 78.1572
+    },
+    "3": {
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "district_count": 11,
+      "districts": [
+        "CUDDALORE",
+        "KANCHIPURAM",
+        "KANNIYAKUMARI",
+        "RAMANATHAPURAM",
+        "THIRUVALLUR",
+        "TIRUNELVELI",
+        "TIRUVANNAMALAI",
+        "TUTICORIN",
+        "VELLORE",
+        "VILLUPURAM",
+        "VIRUDHUNAGAR"
+      ],
+      "soil_confidence_breakdown": {
+        "zone-avg": 8,
+        "real": 2,
+        "low-confidence": 1
+      },
+      "climate_soil_means": {
+        "Rainfall": 1189.78,
+        "Temp": 27.49,
+        "Humidity": 73.98,
+        "pH": 6.86,
+        "N": 234.18,
+        "P": 22.97,
+        "K": 463.91
+      },
+      "latitude_mean": 10.846,
+      "longitude_mean": 78.8463
+    }
+  },
+  "district_assignments": {
+    "ARIYALUR": {
+      "district": "ARIYALUR",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Cauvery Delta",
+      "soil_confidence": "zone-avg",
+      "latitude": 11.1401,
+      "longitude": 79.0747,
+      "features": {
+        "Rainfall": 977.51,
+        "Temp": 28.22,
+        "Humidity": 70.38,
+        "pH": 7.85,
+        "N": 250.0,
+        "P": 20.0,
+        "K": 300.0
+      }
+    },
+    "COIMBATORE": {
+      "district": "COIMBATORE",
+      "cluster_id": 1,
+      "cluster_name": "Western Ghats & Highland Agro-Zone",
+      "zone": "Western",
+      "soil_confidence": "real",
+      "latitude": 11.0168,
+      "longitude": 76.9558,
+      "features": {
+        "Rainfall": 1131.61,
+        "Temp": 24.41,
+        "Humidity": 75.43,
+        "pH": 7.82,
+        "N": 333.5,
+        "P": 30.2,
+        "K": 347.5
+      }
+    },
+    "CUDDALORE": {
+      "district": "CUDDALORE",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "North Eastern",
+      "soil_confidence": "real",
+      "latitude": 11.748,
+      "longitude": 79.7714,
+      "features": {
+        "Rainfall": 1027.34,
+        "Temp": 28.13,
+        "Humidity": 75.41,
+        "pH": 6.56,
+        "N": 236.5,
+        "P": 29.0,
+        "K": 518.0
+      }
+    },
+    "DHARMAPURI": {
+      "district": "DHARMAPURI",
+      "cluster_id": 2,
+      "cluster_name": "North-Western Plateau",
+      "zone": "North Western",
+      "soil_confidence": "zone-avg",
+      "latitude": 12.1277,
+      "longitude": 78.1582,
+      "features": {
+        "Rainfall": 921.37,
+        "Temp": 25.65,
+        "Humidity": 68.79,
+        "pH": 7.8,
+        "N": 190.2,
+        "P": 37.9,
+        "K": 335.5
+      }
+    },
+    "DINDIGUL": {
+      "district": "DINDIGUL",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Western",
+      "soil_confidence": "zone-avg",
+      "latitude": 10.3673,
+      "longitude": 77.9803,
+      "features": {
+        "Rainfall": 843.41,
+        "Temp": 27.12,
+        "Humidity": 68.18,
+        "pH": 7.42,
+        "N": 272.0,
+        "P": 24.8,
+        "K": 241.4
+      }
+    },
+    "ERODE": {
+      "district": "ERODE",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Western",
+      "soil_confidence": "real",
+      "latitude": 11.341,
+      "longitude": 77.7172,
+      "features": {
+        "Rainfall": 723.99,
+        "Temp": 26.32,
+        "Humidity": 65.74,
+        "pH": 8.27,
+        "N": 425.0,
+        "P": 38.5,
+        "K": 270.0
+      }
+    },
+    "KANCHIPURAM": {
+      "district": "KANCHIPURAM",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "North Eastern",
+      "soil_confidence": "zone-avg",
+      "latitude": 12.8342,
+      "longitude": 79.7036,
+      "features": {
+        "Rainfall": 1224.42,
+        "Temp": 27.9,
+        "Humidity": 72.31,
+        "pH": 6.56,
+        "N": 236.5,
+        "P": 29.0,
+        "K": 518.0
+      }
+    },
+    "KANNIYAKUMARI": {
+      "district": "KANNIYAKUMARI",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "High Rainfall",
+      "soil_confidence": "low-confidence",
+      "latitude": 8.0883,
+      "longitude": 77.5385,
+      "features": {
+        "Rainfall": 1470.54,
+        "Temp": 27.37,
+        "Humidity": 80.55,
+        "pH": 7.28,
+        "N": 227.0,
+        "P": 15.8,
+        "K": 382.5
+      }
+    },
+    "KARUR": {
+      "district": "KARUR",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Western",
+      "soil_confidence": "zone-avg",
+      "latitude": 10.9504,
+      "longitude": 78.0832,
+      "features": {
+        "Rainfall": 787.74,
+        "Temp": 27.32,
+        "Humidity": 67.22,
+        "pH": 7.42,
+        "N": 272.0,
+        "P": 24.8,
+        "K": 241.4
+      }
+    },
+    "KRISHNAGIRI": {
+      "district": "KRISHNAGIRI",
+      "cluster_id": 1,
+      "cluster_name": "Western Ghats & Highland Agro-Zone",
+      "zone": "North Western",
+      "soil_confidence": "real",
+      "latitude": 12.5186,
+      "longitude": 78.2137,
+      "features": {
+        "Rainfall": 978.32,
+        "Temp": 24.54,
+        "Humidity": 70.36,
+        "pH": 7.69,
+        "N": 238.0,
+        "P": 24.8,
+        "K": 177.0
+      }
+    },
+    "MADURAI": {
+      "district": "MADURAI",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Southern",
+      "soil_confidence": "real",
+      "latitude": 9.9252,
+      "longitude": 78.1198,
+      "features": {
+        "Rainfall": 1011.89,
+        "Temp": 27.11,
+        "Humidity": 69.52,
+        "pH": 7.6,
+        "N": 205.0,
+        "P": 16.0,
+        "K": 300.0
+      }
+    },
+    "NAGAPATTINAM": {
+      "district": "NAGAPATTINAM",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Cauvery Delta",
+      "soil_confidence": "zone-avg",
+      "latitude": 10.7656,
+      "longitude": 79.8424,
+      "features": {
+        "Rainfall": 985.41,
+        "Temp": 28.19,
+        "Humidity": 75.26,
+        "pH": 7.85,
+        "N": 250.0,
+        "P": 20.0,
+        "K": 300.0
+      }
+    },
+    "NAMAKKAL": {
+      "district": "NAMAKKAL",
+      "cluster_id": 2,
+      "cluster_name": "North-Western Plateau",
+      "zone": "North Western",
+      "soil_confidence": "zone-avg",
+      "latitude": 11.2189,
+      "longitude": 78.1674,
+      "features": {
+        "Rainfall": 787.74,
+        "Temp": 27.32,
+        "Humidity": 67.22,
+        "pH": 7.8,
+        "N": 190.2,
+        "P": 37.9,
+        "K": 335.5
+      }
+    },
+    "PERAMBALUR": {
+      "district": "PERAMBALUR",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Cauvery Delta",
+      "soil_confidence": "zone-avg",
+      "latitude": 11.2342,
+      "longitude": 78.8821,
+      "features": {
+        "Rainfall": 835.09,
+        "Temp": 27.53,
+        "Humidity": 68.67,
+        "pH": 7.85,
+        "N": 250.0,
+        "P": 20.0,
+        "K": 300.0
+      }
+    },
+    "PUDUKKOTTAI": {
+      "district": "PUDUKKOTTAI",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Cauvery Delta",
+      "soil_confidence": "zone-avg",
+      "latitude": 10.3797,
+      "longitude": 78.8205,
+      "features": {
+        "Rainfall": 851.89,
+        "Temp": 27.96,
+        "Humidity": 68.78,
+        "pH": 7.85,
+        "N": 250.0,
+        "P": 20.0,
+        "K": 300.0
+      }
+    },
+    "RAMANATHAPURAM": {
+      "district": "RAMANATHAPURAM",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "Southern",
+      "soil_confidence": "zone-avg",
+      "latitude": 9.3639,
+      "longitude": 78.8363,
+      "features": {
+        "Rainfall": 1042.01,
+        "Temp": 27.96,
+        "Humidity": 73.78,
+        "pH": 7.28,
+        "N": 227.0,
+        "P": 15.8,
+        "K": 382.5
+      }
+    },
+    "SALEM": {
+      "district": "SALEM",
+      "cluster_id": 2,
+      "cluster_name": "North-Western Plateau",
+      "zone": "North Western",
+      "soil_confidence": "real",
+      "latitude": 11.6643,
+      "longitude": 78.146,
+      "features": {
+        "Rainfall": 843.5,
+        "Temp": 26.79,
+        "Humidity": 67.21,
+        "pH": 7.91,
+        "N": 142.5,
+        "P": 51.0,
+        "K": 494.0
+      }
+    },
+    "SIVAGANGA": {
+      "district": "SIVAGANGA",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Southern",
+      "soil_confidence": "zone-avg",
+      "latitude": 9.8433,
+      "longitude": 78.4809,
+      "features": {
+        "Rainfall": 945.14,
+        "Temp": 27.96,
+        "Humidity": 70.57,
+        "pH": 7.28,
+        "N": 227.0,
+        "P": 15.8,
+        "K": 382.5
+      }
+    },
+    "THANJAVUR": {
+      "district": "THANJAVUR",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Cauvery Delta",
+      "soil_confidence": "real",
+      "latitude": 10.7815,
+      "longitude": 79.1381,
+      "features": {
+        "Rainfall": 988.78,
+        "Temp": 28.12,
+        "Humidity": 70.77,
+        "pH": 7.85,
+        "N": 250.0,
+        "P": 20.0,
+        "K": 300.0
+      }
+    },
+    "THE NILGIRIS": {
+      "district": "THE NILGIRIS",
+      "cluster_id": 1,
+      "cluster_name": "Western Ghats & Highland Agro-Zone",
+      "zone": "High Altitude/Hills",
+      "soil_confidence": "low-confidence",
+      "latitude": 11.4064,
+      "longitude": 76.6932,
+      "features": {
+        "Rainfall": 965.84,
+        "Temp": 23.34,
+        "Humidity": 73.17,
+        "pH": 7.42,
+        "N": 272.0,
+        "P": 24.8,
+        "K": 241.4
+      }
+    },
+    "THENI": {
+      "district": "THENI",
+      "cluster_id": 1,
+      "cluster_name": "Western Ghats & Highland Agro-Zone",
+      "zone": "Western",
+      "soil_confidence": "real",
+      "latitude": 10.0104,
+      "longitude": 77.4768,
+      "features": {
+        "Rainfall": 1190.46,
+        "Temp": 23.57,
+        "Humidity": 74.77,
+        "pH": 6.09,
+        "N": 189.5,
+        "P": 13.8,
+        "K": 123.0
+      }
+    },
+    "THIRUVALLUR": {
+      "district": "THIRUVALLUR",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "North Eastern",
+      "soil_confidence": "zone-avg",
+      "latitude": 13.1436,
+      "longitude": 79.9125,
+      "features": {
+        "Rainfall": 1224.42,
+        "Temp": 27.9,
+        "Humidity": 72.31,
+        "pH": 6.56,
+        "N": 236.5,
+        "P": 29.0,
+        "K": 518.0
+      }
+    },
+    "THIRUVARUR": {
+      "district": "THIRUVARUR",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Cauvery Delta",
+      "soil_confidence": "zone-avg",
+      "latitude": 10.7661,
+      "longitude": 79.6367,
+      "features": {
+        "Rainfall": 988.78,
+        "Temp": 28.12,
+        "Humidity": 70.77,
+        "pH": 7.85,
+        "N": 250.0,
+        "P": 20.0,
+        "K": 300.0
+      }
+    },
+    "TIRUCHIRAPPALLI": {
+      "district": "TIRUCHIRAPPALLI",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Cauvery Delta",
+      "soil_confidence": "zone-avg",
+      "latitude": 10.7905,
+      "longitude": 78.7047,
+      "features": {
+        "Rainfall": 835.09,
+        "Temp": 27.53,
+        "Humidity": 68.67,
+        "pH": 7.85,
+        "N": 250.0,
+        "P": 20.0,
+        "K": 300.0
+      }
+    },
+    "TIRUNELVELI": {
+      "district": "TIRUNELVELI",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "Southern",
+      "soil_confidence": "zone-avg",
+      "latitude": 8.7139,
+      "longitude": 77.7567,
+      "features": {
+        "Rainfall": 1487.68,
+        "Temp": 25.57,
+        "Humidity": 80.34,
+        "pH": 7.28,
+        "N": 227.0,
+        "P": 15.8,
+        "K": 382.5
+      }
+    },
+    "TIRUPPUR": {
+      "district": "TIRUPPUR",
+      "cluster_id": 0,
+      "cluster_name": "Central & Delta Semi-Arid Plains",
+      "zone": "Western",
+      "soil_confidence": "real",
+      "latitude": 11.1085,
+      "longitude": 77.3411,
+      "features": {
+        "Rainfall": 642.65,
+        "Temp": 27.14,
+        "Humidity": 65.52,
+        "pH": 7.5,
+        "N": 140.0,
+        "P": 16.5,
+        "K": 225.0
+      }
+    },
+    "TIRUVANNAMALAI": {
+      "district": "TIRUVANNAMALAI",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "North Eastern",
+      "soil_confidence": "zone-avg",
+      "latitude": 12.2253,
+      "longitude": 79.0747,
+      "features": {
+        "Rainfall": 1087.14,
+        "Temp": 27.74,
+        "Humidity": 70.71,
+        "pH": 6.56,
+        "N": 236.5,
+        "P": 29.0,
+        "K": 518.0
+      }
+    },
+    "TUTICORIN": {
+      "district": "TUTICORIN",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "Southern",
+      "soil_confidence": "zone-avg",
+      "latitude": 8.7642,
+      "longitude": 78.1348,
+      "features": {
+        "Rainfall": 1217.51,
+        "Temp": 27.57,
+        "Humidity": 75.14,
+        "pH": 7.28,
+        "N": 227.0,
+        "P": 15.8,
+        "K": 382.5
+      }
+    },
+    "VELLORE": {
+      "district": "VELLORE",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "North Eastern",
+      "soil_confidence": "zone-avg",
+      "latitude": 12.9165,
+      "longitude": 79.1325,
+      "features": {
+        "Rainfall": 1045.57,
+        "Temp": 26.92,
+        "Humidity": 70.28,
+        "pH": 6.56,
+        "N": 236.5,
+        "P": 29.0,
+        "K": 518.0
+      }
+    },
+    "VILLUPURAM": {
+      "district": "VILLUPURAM",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "North Eastern",
+      "soil_confidence": "zone-avg",
+      "latitude": 11.9401,
+      "longitude": 79.4861,
+      "features": {
+        "Rainfall": 1087.14,
+        "Temp": 27.74,
+        "Humidity": 70.71,
+        "pH": 6.56,
+        "N": 236.5,
+        "P": 29.0,
+        "K": 518.0
+      }
+    },
+    "VIRUDHUNAGAR": {
+      "district": "VIRUDHUNAGAR",
+      "cluster_id": 3,
+      "cluster_name": "Coastal Humid Plain",
+      "zone": "Southern",
+      "soil_confidence": "real",
+      "latitude": 9.568,
+      "longitude": 77.9624,
+      "features": {
+        "Rainfall": 1173.79,
+        "Temp": 27.52,
+        "Humidity": 72.29,
+        "pH": 6.95,
+        "N": 249.0,
+        "P": 15.5,
+        "K": 465.0
+      }
+    }
+  },
+  "caveats": "Clusters represent environmental and edaphic similarity across 31 districts, not inherent crop-yield risk or causal potential."
+}

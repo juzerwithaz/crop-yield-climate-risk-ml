@@ -1,0 +1,6 @@
+Crop,Yield_Tau20_V1,Yield_Tau20_V2,Delta_Tau20,Prob_Threshold_V1,Prob_Threshold_V2
+Cotton(lint),1.1772,1.1772,0.0,0.5,0.5
+Groundnut,1.3077,1.3077,0.0,0.5,0.5
+Maize,1.2341,1.2341,0.0,0.5,0.5
+Rice,2.7434,2.7434,0.0,0.45,0.45
+Sugarcane,91.441,90.727,-0.7139999999999986,0.55,0.55

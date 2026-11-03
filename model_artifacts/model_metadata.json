@@ -1,0 +1,331 @@
+{
+  "project": "District-Level Crop Yield Prediction with Explainable Climate-Risk Clustering",
+  "region": "Tamil Nadu, India (31 Districts)",
+  "data_version": "tn_master_dataset_stage1_ready.csv (NASA POWER corrected)",
+  "temporal_splits": {
+    "train": "1997-2007 (Year <= 2007)",
+    "validation": "2008-2009",
+    "test": "2010-2013 (disclosed: previously inspected in exploratory research)"
+  },
+  "feature_schemas": {
+    "Group_A_Fallback": {
+      "features": [
+        "Rainfall",
+        "Temp",
+        "Humidity",
+        "pH",
+        "N",
+        "P",
+        "K"
+      ],
+      "count": 7,
+      "description": "Climate and soil features only. Used when historical yield is unavailable."
+    },
+    "Group_B_Primary": {
+      "features": [
+        "Rainfall",
+        "Temp",
+        "Humidity",
+        "pH",
+        "N",
+        "P",
+        "K",
+        "Yield_Lag_Avg"
+      ],
+      "count": 8,
+      "description": "Climate, soil, and 3-year historical calendar lag average (t-1, t-2, t-3)."
+    }
+  },
+  "crops": {
+    "Cotton(lint)": {
+      "crop_name": "Cotton(lint)",
+      "crop_identifier": "cotton_lint",
+      "regression": {
+        "model_family": "RandomForest",
+        "hyperparameters": {},
+        "primary_artifact": "yield_model_cotton_lint.joblib",
+        "fallback_artifact": "yield_model_fallback_cotton_lint.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "Yield",
+        "target_unit": "t/ha",
+        "target_transform": "raw",
+        "model_status": "research_prototype",
+        "status_rationale": "Modest or marginal predictive fit; useful as benchmark prototype with documented caveats.",
+        "validation_metrics": {
+          "R2": 0.0819831947781231,
+          "RMSE": 1.0084866523948752,
+          "MAE": 0.6500145285169823
+        },
+        "test_metrics": {
+          "R2": -0.18019156955454085,
+          "RMSE": 0.8374717733370164,
+          "MAE": 0.6712123791966147,
+          "N": 113
+        }
+      },
+      "classification": {
+        "model_family": "RandomForest",
+        "primary_artifact": "risk_model_cotton_lint.joblib",
+        "fallback_artifact": "risk_model_fallback_cotton_lint.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "High_Yield_Risk (Binary: Yield <= tau_20)",
+        "yield_threshold_tau20": 1.1772,
+        "decision_threshold_p": 0.5,
+        "model_status": "research_prototype",
+        "status_rationale": "Modest test ROC-AUC (0.796), but evaluated on small positive count (N_pos=6).",
+        "validation_metrics": {
+          "F1": 0.7777777777777778,
+          "ROC_AUC": 0.8680555555555556,
+          "Brier_Score": 0.10073796424545173
+        },
+        "test_metrics": {
+          "Accuracy": 0.9203539823008849,
+          "Balanced_Accuracy": 0.6433021806853583,
+          "Precision": 0.2857142857142857,
+          "Recall": 0.3333333333333333,
+          "F1": 0.3076923076923077,
+          "ROC_AUC": 0.735202492211838,
+          "PR_AUC": 0.1894188442551573,
+          "Brier_Score": 0.09767425378728498,
+          "Positives": 6,
+          "Negatives": 107,
+          "Total": 113
+        }
+      }
+    },
+    "Groundnut": {
+      "crop_name": "Groundnut",
+      "crop_identifier": "groundnut",
+      "regression": {
+        "model_family": "HistGradientBoosting",
+        "hyperparameters": {},
+        "primary_artifact": "yield_model_groundnut.joblib",
+        "fallback_artifact": "yield_model_fallback_groundnut.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "Yield",
+        "target_unit": "t/ha",
+        "target_transform": "raw",
+        "model_status": "operational",
+        "status_rationale": "Verified positive test generalization R\u00b2 with robust historical lag signal.",
+        "validation_metrics": {
+          "R2": 0.038430362412749,
+          "RMSE": 1.8119673103441025,
+          "MAE": 0.614471708231749
+        },
+        "test_metrics": {
+          "R2": 0.1674322441211128,
+          "RMSE": 0.8565520584812876,
+          "MAE": 0.619381231969691,
+          "N": 122
+        }
+      },
+      "classification": {
+        "model_family": "LogisticRegression",
+        "primary_artifact": "risk_model_groundnut.joblib",
+        "fallback_artifact": "risk_model_fallback_groundnut.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "High_Yield_Risk (Binary: Yield <= tau_20)",
+        "yield_threshold_tau20": 1.3077,
+        "decision_threshold_p": 0.5,
+        "model_status": "operational",
+        "status_rationale": "High discrimination (Test ROC-AUC > 0.90, Recall > 0.80) with consistent historical lag signal.",
+        "validation_metrics": {
+          "F1": 0.36363636363636365,
+          "ROC_AUC": 0.8226415094339623,
+          "Brier_Score": 0.17491082757618628
+        },
+        "test_metrics": {
+          "Accuracy": 0.8442622950819673,
+          "Balanced_Accuracy": 0.8390804597701149,
+          "Precision": 0.21739130434782608,
+          "Recall": 0.8333333333333334,
+          "F1": 0.3448275862068966,
+          "ROC_AUC": 0.9080459770114943,
+          "PR_AUC": 0.45965608465608465,
+          "Brier_Score": 0.11807554165851628,
+          "Positives": 6,
+          "Negatives": 116,
+          "Total": 122
+        }
+      }
+    },
+    "Maize": {
+      "crop_name": "Maize",
+      "crop_identifier": "maize",
+      "regression": {
+        "model_family": "GradientBoosting",
+        "hyperparameters": {},
+        "primary_artifact": "yield_model_maize.joblib",
+        "fallback_artifact": "yield_model_fallback_maize.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "Yield",
+        "target_unit": "t/ha",
+        "target_transform": "raw",
+        "model_status": "experimental",
+        "status_rationale": "Experimental: tree models cannot extrapolate to post-2007 hybrid yield surge (Test R\u00b2 < 0).",
+        "validation_metrics": {
+          "R2": -0.1355987531268319,
+          "RMSE": 3.5280149447338753,
+          "MAE": 1.973629012027038
+        },
+        "test_metrics": {
+          "R2": -1.499178495829267,
+          "RMSE": 2.64652311572947,
+          "MAE": 1.823076919209589,
+          "N": 113
+        }
+      },
+      "classification": {
+        "model_family": "LogisticRegression",
+        "primary_artifact": "risk_model_maize.joblib",
+        "fallback_artifact": "risk_model_fallback_maize.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "High_Yield_Risk (Binary: Yield <= tau_20)",
+        "yield_threshold_tau20": 1.2341,
+        "decision_threshold_p": 0.5,
+        "model_status": "experimental",
+        "status_rationale": "Experimental: extreme post-2007 regime shift resulted in 0 validation positives and only 2 test positives.",
+        "validation_metrics": {
+          "F1": NaN,
+          "ROC_AUC": NaN,
+          "Brier_Score": 0.058106490925955066
+        },
+        "test_metrics": {
+          "Accuracy": 0.9823008849557522,
+          "Balanced_Accuracy": 0.7454954954954955,
+          "Precision": 0.5,
+          "Recall": 0.5,
+          "F1": 0.5,
+          "ROC_AUC": 0.8243243243243242,
+          "PR_AUC": 0.275,
+          "Brier_Score": 0.017528383082871815,
+          "Positives": 2,
+          "Negatives": 111,
+          "Total": 113
+        }
+      }
+    },
+    "Rice": {
+      "crop_name": "Rice",
+      "crop_identifier": "rice",
+      "regression": {
+        "model_family": "RandomForest",
+        "hyperparameters": {},
+        "primary_artifact": "yield_model_rice.joblib",
+        "fallback_artifact": "yield_model_fallback_rice.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "Yield",
+        "target_unit": "t/ha",
+        "target_transform": "raw",
+        "model_status": "operational",
+        "status_rationale": "Verified positive test generalization R\u00b2 with robust historical lag signal.",
+        "validation_metrics": {
+          "R2": 0.15746071886973223,
+          "RMSE": 1.3563851541075982,
+          "MAE": 0.7594838438686181
+        },
+        "test_metrics": {
+          "R2": 0.13202344110998832,
+          "RMSE": 1.0426549289945755,
+          "MAE": 0.8110475356531098,
+          "N": 124
+        }
+      },
+      "classification": {
+        "model_family": "RandomForest",
+        "primary_artifact": "risk_model_rice.joblib",
+        "fallback_artifact": "risk_model_fallback_rice.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "High_Yield_Risk (Binary: Yield <= tau_20)",
+        "yield_threshold_tau20": 2.7434,
+        "decision_threshold_p": 0.45,
+        "model_status": "operational",
+        "status_rationale": "High discrimination (Test ROC-AUC > 0.90, Recall > 0.80) with consistent historical lag signal.",
+        "validation_metrics": {
+          "F1": 0.8148148148148148,
+          "ROC_AUC": 0.960720130932897,
+          "Brier_Score": 0.08649192799956347
+        },
+        "test_metrics": {
+          "Accuracy": 0.8225806451612904,
+          "Balanced_Accuracy": 0.8477185266630016,
+          "Precision": 0.42857142857142855,
+          "Recall": 0.8823529411764706,
+          "F1": 0.5769230769230769,
+          "ROC_AUC": 0.9092908191313909,
+          "PR_AUC": 0.6234564539777929,
+          "Brier_Score": 0.12949239217042843,
+          "Positives": 17,
+          "Negatives": 107,
+          "Total": 124
+        }
+      }
+    },
+    "Sugarcane": {
+      "crop_name": "Sugarcane",
+      "crop_identifier": "sugarcane",
+      "regression": {
+        "model_family": "HistGradientBoosting",
+        "hyperparameters": {},
+        "primary_artifact": "yield_model_sugarcane.joblib",
+        "fallback_artifact": "yield_model_fallback_sugarcane.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "Yield",
+        "target_unit": "t/ha",
+        "target_transform": "raw",
+        "model_status": "research_prototype",
+        "status_rationale": "Modest or marginal predictive fit; useful as benchmark prototype with documented caveats.",
+        "validation_metrics": {
+          "R2": 0.0650346787837035,
+          "RMSE": 36.27914757758335,
+          "MAE": 17.400139435125002
+        },
+        "test_metrics": {
+          "R2": 0.05978914215529474,
+          "RMSE": 15.256048410506416,
+          "MAE": 11.652426863164022,
+          "N": 121
+        }
+      },
+      "classification": {
+        "model_family": "HistGradientBoosting",
+        "primary_artifact": "risk_model_sugarcane.joblib",
+        "fallback_artifact": "risk_model_fallback_sugarcane.joblib",
+        "feature_group_primary": "Group_B_Primary",
+        "feature_group_fallback": "Group_A_Fallback",
+        "target": "High_Yield_Risk (Binary: Yield <= tau_20)",
+        "yield_threshold_tau20": 91.441,
+        "decision_threshold_p": 0.55,
+        "model_status": "experimental",
+        "status_rationale": "Experimental: weak discrimination (Test ROC-AUC = 0.5815), near chance level.",
+        "validation_metrics": {
+          "F1": 0.45714285714285713,
+          "ROC_AUC": 0.7523148148148149,
+          "Brier_Score": 0.19423150156564678
+        },
+        "test_metrics": {
+          "Accuracy": 0.6611570247933884,
+          "Balanced_Accuracy": 0.5941666666666667,
+          "Precision": 0.3,
+          "Recall": 0.48,
+          "F1": 0.36923076923076925,
+          "ROC_AUC": 0.574375,
+          "PR_AUC": 0.24369303281582128,
+          "Brier_Score": 0.25116412218357953,
+          "Positives": 25,
+          "Negatives": 96,
+          "Total": 121
+        }
+      }
+    }
+  }
+}

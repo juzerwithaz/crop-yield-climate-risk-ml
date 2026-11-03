@@ -1,0 +1,4 @@
+Test_Type,Description,Metric,Mean_Value,Min_Value,Max_Value,Notes
+KMeans_Random_Seed_Sensitivity,Comparison across 10 random seeds (0-9) against seed 42,Adjusted_Rand_Index (ARI),0.9447365488148944,0.6021883020397136,1.0,ARI = 1.0 indicates perfect cluster stability across initializations
+Algorithm_Agreement,K-Means vs Agglomerative Ward Clustering on all 31 districts,Adjusted_Rand_Index (ARI),0.5174820591801291,0.5174820591801291,0.5174820591801291,Measures structural consensus between centroid-based and hierarchical linkage
+Soil_Uncertainty_Sensitivity,"Excluding 2 low-confidence districts (KANNIYAKUMARI, THE NILGIRIS) and refitting on 29 districts",Adjusted_Rand_Index (ARI),0.930969990648644,0.930969990648644,0.930969990648644,Evaluated on the 29 shared districts (invariant to label permutations)

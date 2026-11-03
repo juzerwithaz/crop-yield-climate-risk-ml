@@ -1,0 +1,67 @@
+{
+  "yield_risk_thresholds": {
+    "Cotton(lint)": {
+      "tau_15": 1.0781,
+      "tau_20_primary": 1.1772,
+      "tau_25": 1.2837,
+      "train_n": 291,
+      "train_mean_yield": 1.7411
+    },
+    "Groundnut": {
+      "tau_15": 1.2559,
+      "tau_20_primary": 1.3077,
+      "tau_25": 1.3673,
+      "train_n": 306,
+      "train_mean_yield": 1.7681
+    },
+    "Maize": {
+      "tau_15": 1.1696,
+      "tau_20_primary": 1.2341,
+      "tau_25": 1.6067,
+      "train_n": 209,
+      "train_mean_yield": 2.3658
+    },
+    "Rice": {
+      "tau_15": 2.5582,
+      "tau_20_primary": 2.7434,
+      "tau_25": 2.8792,
+      "train_n": 312,
+      "train_mean_yield": 3.2465
+    },
+    "Sugarcane": {
+      "tau_15": 87.1503,
+      "tau_20_primary": 90.727,
+      "tau_25": 91.8399,
+      "train_n": 300,
+      "train_mean_yield": 107.5771
+    }
+  },
+  "decision_probability_thresholds": {
+    "Cotton(lint)": {
+      "default": 0.5,
+      "tuned": 0.5,
+      "selection_criterion": "Validation F1 & Balanced Accuracy (or default)"
+    },
+    "Groundnut": {
+      "default": 0.5,
+      "tuned": 0.5,
+      "selection_criterion": "Validation F1 & Balanced Accuracy (or default)"
+    },
+    "Maize": {
+      "default": 0.5,
+      "tuned": 0.5,
+      "selection_criterion": "Validation F1 & Balanced Accuracy (or default)"
+    },
+    "Rice": {
+      "default": 0.5,
+      "tuned": 0.45,
+      "selection_criterion": "Validation F1 & Balanced Accuracy (or default)"
+    },
+    "Sugarcane": {
+      "default": 0.5,
+      "tuned": 0.55,
+      "selection_criterion": "Validation F1 & Balanced Accuracy (or default)"
+    }
+  },
+  "caveats": "Yield thresholds define ground truth from training data (Year <= 2007). Probability decision thresholds map model probabilities to risk warnings."
+}

@@ -1,0 +1,64 @@
+Crop,Model,Feature,Permutation_Mean_Impact,Permutation_Std_Impact,Metric_Used,Validation_Status
+Cotton(lint),RandomForest,Rainfall,0.0,0.0,Balanced_Accuracy,Valid (Both classes present)
+Cotton(lint),RandomForest,Temp,0.001041666666666674,0.0031250000000000227,Balanced_Accuracy,Valid (Both classes present)
+Cotton(lint),RandomForest,Humidity,0.001041666666666674,0.0031250000000000227,Balanced_Accuracy,Valid (Both classes present)
+Cotton(lint),RandomForest,pH,0.014583333333333382,0.006909634979907082,Balanced_Accuracy,Valid (Both classes present)
+Cotton(lint),RandomForest,N,0.00520833333333337,0.00520833333333337,Balanced_Accuracy,Valid (Both classes present)
+Cotton(lint),RandomForest,P,0.0031250000000000223,0.004773516348912367,Balanced_Accuracy,Valid (Both classes present)
+Cotton(lint),RandomForest,K,0.002083333333333348,0.004166666666666696,Balanced_Accuracy,Valid (Both classes present)
+Cotton(lint),RandomForest,Yield_Lag_Avg,0.32430555555555557,0.0835962288342521,Balanced_Accuracy,Valid (Both classes present)
+Cotton(lint),RandomForest,Yield_Lag_Years_Available,0.0,0.0,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,Rainfall,-0.013018867924528266,0.06841775848448484,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,Temp,-0.015094339622641506,0.00462167875996826,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,Humidity,-0.0018867924528301772,0.0056603773584905865,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,pH,0.04226415094339629,0.0824172022676036,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,N,0.009056603773584915,0.030444669360799956,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,P,-0.0009433962264150941,0.0028301886792452824,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,K,-0.0018867924528301661,0.008224337629322055,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,Yield_Lag_Avg,0.26207547169811324,0.08738293801932141,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,Yield_Lag_Years_Available,-0.0009433962264150941,0.0028301886792452824,Balanced_Accuracy,Valid (Both classes present)
+Groundnut,LogisticRegression,Rainfall,-0.574029324740344,0.5632513376805951,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Groundnut,LogisticRegression,Temp,-0.10163252463681342,0.9033614537605305,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Groundnut,LogisticRegression,Humidity,0.04311271167588885,1.0440555654715669,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Groundnut,LogisticRegression,pH,-0.3815835371794995,0.6827793462148509,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Groundnut,LogisticRegression,N,-0.014198048977235122,0.9859022679905378,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Groundnut,LogisticRegression,P,-0.1270288237515615,0.8807082869144433,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Groundnut,LogisticRegression,K,-0.0048170373663947155,0.9951945459515444,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Groundnut,LogisticRegression,Yield_Lag_Avg,-1.8565794597121663,0.15620602660347502,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Groundnut,LogisticRegression,Yield_Lag_Years_Available,0.12151374303186893,1.1292048845172356,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Maize,LogisticRegression,Rainfall,0.0,0.0,Balanced_Accuracy,Evaluated on Chronological Train-Late (2004)
+Maize,LogisticRegression,Temp,0.010526315789473628,0.012892051277806132,Balanced_Accuracy,Evaluated on Chronological Train-Late (2004)
+Maize,LogisticRegression,Humidity,0.0,0.0,Balanced_Accuracy,Evaluated on Chronological Train-Late (2004)
+Maize,LogisticRegression,pH,0.09254385964912273,0.05800262409024493,Balanced_Accuracy,Evaluated on Chronological Train-Late (2004)
+Maize,LogisticRegression,N,0.0,0.0,Balanced_Accuracy,Evaluated on Chronological Train-Late (2004)
+Maize,LogisticRegression,P,0.024999999999999977,0.03818813079129863,Balanced_Accuracy,Evaluated on Chronological Train-Late (2004)
+Maize,LogisticRegression,K,0.0,0.0,Balanced_Accuracy,Evaluated on Chronological Train-Late (2004)
+Maize,LogisticRegression,Yield_Lag_Avg,0.3644736842105263,0.10372505651940533,Balanced_Accuracy,Evaluated on Chronological Train-Late (2004)
+Maize,LogisticRegression,Yield_Lag_Years_Available,0.0,0.0,Balanced_Accuracy,Evaluated on Chronological Train-Late (2004)
+Maize,LogisticRegression,Rainfall,0.08979364426736029,1.0939485178640997,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Maize,LogisticRegression,Temp,-0.4382967402387682,0.6451343171396026,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Maize,LogisticRegression,Humidity,0.18761360859476875,1.2063672953292341,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Maize,LogisticRegression,pH,0.8400569941506592,2.3164989999117855,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Maize,LogisticRegression,N,-0.05055485995879932,0.9507017717816472,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Maize,LogisticRegression,P,-0.248113867213246,0.7802710909247453,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Maize,LogisticRegression,K,0.09590822733202693,1.1006580490331577,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Maize,LogisticRegression,Yield_Lag_Avg,-1.464804932294088,0.231123071727722,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Maize,LogisticRegression,Yield_Lag_Years_Available,-0.44562988767801937,0.6404207558166178,Standardized_Logit_Coeff_and_Odds_Ratio,Model Parameter
+Rice,HistGradientBoosting,Rainfall,-0.013502454991816671,0.018405163137960097,Balanced_Accuracy,Valid (Both classes present)
+Rice,HistGradientBoosting,Temp,0.09918166939443537,0.036200933403273496,Balanced_Accuracy,Valid (Both classes present)
+Rice,HistGradientBoosting,Humidity,0.007201309328968975,0.027172519580506246,Balanced_Accuracy,Valid (Both classes present)
+Rice,HistGradientBoosting,pH,0.0,0.0,Balanced_Accuracy,Valid (Both classes present)
+Rice,HistGradientBoosting,N,-0.001472995090016338,0.02857790445455087,Balanced_Accuracy,Valid (Both classes present)
+Rice,HistGradientBoosting,P,0.03150572831423898,0.037336417953854624,Balanced_Accuracy,Valid (Both classes present)
+Rice,HistGradientBoosting,K,0.0,0.0,Balanced_Accuracy,Valid (Both classes present)
+Rice,HistGradientBoosting,Yield_Lag_Avg,0.29378068739770874,0.05543668935130827,Balanced_Accuracy,Valid (Both classes present)
+Rice,HistGradientBoosting,Yield_Lag_Years_Available,0.018330605564648182,0.015384615384615373,Balanced_Accuracy,Valid (Both classes present)
+Sugarcane,HistGradientBoosting,Rainfall,0.0597222222222223,0.07258190350252179,Balanced_Accuracy,Valid (Both classes present)
+Sugarcane,HistGradientBoosting,Temp,0.1784722222222223,0.06994955192719117,Balanced_Accuracy,Valid (Both classes present)
+Sugarcane,HistGradientBoosting,Humidity,0.18055555555555564,0.09998553136069978,Balanced_Accuracy,Valid (Both classes present)
+Sugarcane,HistGradientBoosting,pH,0.0031250000000000444,0.008135676745736118,Balanced_Accuracy,Valid (Both classes present)
+Sugarcane,HistGradientBoosting,N,0.0031250000000000665,0.013217268271301598,Balanced_Accuracy,Valid (Both classes present)
+Sugarcane,HistGradientBoosting,P,0.008333333333333392,0.004166666666666696,Balanced_Accuracy,Valid (Both classes present)
+Sugarcane,HistGradientBoosting,K,0.03333333333333335,0.027216552697590882,Balanced_Accuracy,Valid (Both classes present)
+Sugarcane,HistGradientBoosting,Yield_Lag_Avg,0.14687500000000003,0.03995470284360763,Balanced_Accuracy,Valid (Both classes present)
+Sugarcane,HistGradientBoosting,Yield_Lag_Years_Available,0.0031250000000000223,0.004773516348912368,Balanced_Accuracy,Valid (Both classes present)

@@ -1,0 +1,21 @@
+Crop,Model_Type,Model,FeatureGroup,Dev_N,Test_N,Test_R2,Test_RMSE,Test_MAE,Model_Status,Caveats
+Cotton(lint),Primary_Group_B,RandomForest,Group_B_Lag,317,113,-0.18019156955454085,0.8374717733370164,0.6712123791966147,research_prototype,Modest or marginal predictive fit; useful as benchmark prototype with documented caveats.
+Cotton(lint),Fallback_Group_A,RandomForest,Group_A_Fallback,348,113,-0.5171239448779739,0.9495207408149613,0.7762718515751176,fallback_lower_accuracy,Fallback model without historical lag; lower predictive capacity.
+Cotton(lint),Baseline_DevMean,DevMean,Matched_Subset,317,113,-0.7855411069511189,1.030098727615436,0.8262855397842473,baseline,Dev mean baseline
+Cotton(lint),Baseline_HistoricalYield,Yield_Lag_Avg,Matched_Subset,317,113,-0.29510441266662424,0.8772963364465725,0.700762666358327,baseline,Historical persistence baseline
+Groundnut,Primary_Group_B,HistGradientBoosting,Group_B_Lag,335,122,0.1674322441211128,0.8565520584812876,0.619381231969691,operational,Verified positive test generalization R² with robust historical lag signal.
+Groundnut,Fallback_Group_A,HistGradientBoosting,Group_A_Fallback,365,122,-0.5345476434207688,1.1628780091648796,0.8944608820593717,fallback_lower_accuracy,Fallback model without historical lag; lower predictive capacity.
+Groundnut,Baseline_DevMean,DevMean,Matched_Subset,335,122,-0.5754105430828067,1.17825921028023,0.867015785929077,baseline,Dev mean baseline
+Groundnut,Baseline_HistoricalYield,Yield_Lag_Avg,Matched_Subset,335,122,0.006720711959484427,0.9355772641329433,0.6013905284535578,baseline,Historical persistence baseline
+Maize,Primary_Group_B,GradientBoosting,Group_B_Lag,232,113,-1.499178495829267,2.64652311572947,1.823076919209589,experimental,Experimental: tree models cannot extrapolate to post-2007 hybrid yield surge (Test R² < 0).
+Maize,Fallback_Group_A,GradientBoosting,Group_A_Fallback,261,113,-1.2546793110347356,2.5137347208295617,2.162314455647795,fallback_lower_accuracy,Fallback model without historical lag; lower predictive capacity.
+Maize,Baseline_DevMean,DevMean,Matched_Subset,232,113,-1.3204193233037427,2.550118081842531,2.1787949847758945,baseline,Dev mean baseline
+Maize,Baseline_HistoricalYield,Yield_Lag_Avg,Matched_Subset,232,113,-0.18509971279717363,1.8224452933102435,1.4617382457469803,baseline,Historical persistence baseline
+Rice,Primary_Group_B,RandomForest,Group_B_Lag,343,124,0.13202344110998832,1.0426549289945755,0.8110475356531098,operational,Verified positive test generalization R² with robust historical lag signal.
+Rice,Fallback_Group_A,RandomForest,Group_A_Fallback,372,124,-0.17405484882550404,1.2126369450755092,0.9708058646717399,fallback_lower_accuracy,Fallback model without historical lag; lower predictive capacity.
+Rice,Baseline_DevMean,DevMean,Matched_Subset,343,124,-0.2728754576283805,1.262640044556315,1.0814083324393342,baseline,Dev mean baseline
+Rice,Baseline_HistoricalYield,Yield_Lag_Avg,Matched_Subset,343,124,0.1398544920783542,1.0379407554971123,0.8258687036525245,baseline,Historical persistence baseline
+Sugarcane,Primary_Group_B,HistGradientBoosting,Group_B_Lag,329,121,0.05978914215529474,15.256048410506416,11.652426863164022,research_prototype,Modest or marginal predictive fit; useful as benchmark prototype with documented caveats.
+Sugarcane,Fallback_Group_A,HistGradientBoosting,Group_A_Fallback,358,122,-24.51924355346951,79.19055410732634,63.326118035770826,fallback_lower_accuracy,Fallback model without historical lag; lower predictive capacity.
+Sugarcane,Baseline_DevMean,DevMean,Matched_Subset,329,121,-0.08668282366286584,16.401396522461102,12.679002769427171,baseline,Dev mean baseline
+Sugarcane,Baseline_HistoricalYield,Yield_Lag_Avg,Matched_Subset,329,121,-0.6412729683258067,20.15671871869041,14.03499878099566,baseline,Historical persistence baseline
