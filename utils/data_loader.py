@@ -4,6 +4,20 @@ Cached data access layer for datasets, audit reports, and model metadata.
 """
 
 import os
+import sys
+
+# Cross-platform compatibility shim for unpickling Cython loss modules
+if "_loss" not in sys.modules:
+    try:
+        import sklearn._loss._loss as _loss_mod
+        sys.modules["_loss"] = _loss_mod
+    except (ImportError, AttributeError):
+        try:
+            import sklearn._loss as _loss_mod
+            sys.modules["_loss"] = _loss_mod
+        except (ImportError, AttributeError):
+            pass
+
 import json
 import pandas as pd
 import numpy as np

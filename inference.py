@@ -17,10 +17,23 @@ Strict Quality & Safety Guarantees:
 """
 
 import os
+import sys
 import json
 import numpy as np
 import pandas as pd
 import joblib
+
+# Cross-platform compatibility shim for unpickling Cython loss modules
+if "_loss" not in sys.modules:
+    try:
+        import sklearn._loss._loss as _loss_mod
+        sys.modules["_loss"] = _loss_mod
+    except (ImportError, AttributeError):
+        try:
+            import sklearn._loss as _loss_mod
+            sys.modules["_loss"] = _loss_mod
+        except (ImportError, AttributeError):
+            pass
 
 # Default artifacts directory relative to this file
 DEFAULT_ARTIFACTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "model_artifacts")

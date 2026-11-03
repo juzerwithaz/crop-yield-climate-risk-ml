@@ -5,6 +5,20 @@ District-Level Crop Yield Prediction with Explainable Climate-Risk Clustering.
 """
 
 import os
+import sys
+
+# Cross-platform compatibility shim for unpickling Cython loss modules
+if "_loss" not in sys.modules:
+    try:
+        import sklearn._loss._loss as _loss_mod
+        sys.modules["_loss"] = _loss_mod
+    except (ImportError, AttributeError):
+        try:
+            import sklearn._loss as _loss_mod
+            sys.modules["_loss"] = _loss_mod
+        except (ImportError, AttributeError):
+            pass
+
 import streamlit as st
 from utils.engine_provider import get_inference_engine
 from ui_pages.overview import render_overview_page
