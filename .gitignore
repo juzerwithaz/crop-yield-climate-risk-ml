@@ -21,4 +21,7 @@ Thumbs.db
 # Internal explanation, defense, and coaching guides (do not push to GitHub)
 PROJECT_DEFENSE_AND_DEMO_GUIDE.md
 CODEBASE_EXPLANATION.md
+*.docx
+convert_to_word.py
+
 
