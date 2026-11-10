@@ -17,3 +17,8 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+
+# Internal explanation, defense, and coaching guides (do not push to GitHub)
+PROJECT_DEFENSE_AND_DEMO_GUIDE.md
+CODEBASE_EXPLANATION.md
+

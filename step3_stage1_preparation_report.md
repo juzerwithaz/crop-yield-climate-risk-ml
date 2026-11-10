@@ -117,7 +117,7 @@ After saving to disk, `tn_master_dataset_stage1_ready.csv` was reloaded and comp
 
 ## 8. Known Limitations
 
-1. **Prior Inspection of Test Set:** The 2010–2013 test set was examined during preliminary exploratory data analysis and legacy script execution (`02_stage1_final_model..py`). While chronological split boundaries are strictly respected, it cannot be considered completely unseen data in the strictest double-blind experimental sense.
+1. **Prior Inspection of Test Set:** The 2010–2013 test set was examined during preliminary exploratory data analysis and legacy script execution (`02_stage1_final_model.py`). While chronological split boundaries are strictly respected, it cannot be considered completely unseen data in the strictest double-blind experimental sense.
 2. **Missing History in Early Years:** 159 rows have `Yield_Lag_Years_Available == 0` (mostly year 1997). When training tree models or linear models in Stage 1, these observations will need an explicit masking or modeling decision (e.g. separate baseline model or filtering) rather than naive zero-imputation.
 
 ---
