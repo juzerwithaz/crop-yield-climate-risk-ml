@@ -22,8 +22,13 @@ Thumbs.db
 PROJECT_DEFENSE_AND_DEMO_GUIDE.md
 CODEBASE_EXPLANATION.md
 PROJECT_REPORT_FINAL.md
+Tamil_Nadu_Crop_Intelligence_Speaker_Notes.md
 *.docx
+*.pptx
 convert_to_word.py
+build_srm_presentation.py
+presentation_assets/
+
 
 
 
