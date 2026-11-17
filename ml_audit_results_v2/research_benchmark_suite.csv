@@ -1,0 +1,26 @@
+Crop,Evaluation_Protocol,Methodology,Model,Features,R2,RMSE,MAE,N
+Rice,Chronological OOT (2010-2013),Persistence Baseline,Lag-1 Identity (Y_t = Y_{t-1}),Yield_Lag_1,-0.111806204706272,1.1800520102966614,0.8657192546433773,124
+Rice,Naive Leaky 5-Fold CV (1998-2013),Leaky Cross-Validation (Shuffled Years),"Random Forest (100 trees, depth=6)",Lag_Avg + Climate + Soil,0.4587727671520976,0.754439217416781,0.5356620312592725,464
+Rice,Chronological OOT (2010-2013),V2 Production Baseline,Random Forest (Canonical V2),Lag_Avg + Climate + Soil,0.19632088244929458,1.0032933746650083,0.7714012887918206,124
+Rice,Chronological OOT (2010-2013),Enhanced Multi-Lag Framework,Ridge (Lag-1 + Lag-Avg),Lag-1 + Lag-Avg + Climate + Soil + Year,0.19613904040217556,1.0034068718297542,0.7720408414501674,124
+Rice,Chronological OOT (2010-2013),Two-Stage Trend + Residual GBDT,Huber Trend + RF Weather Residuals,State Trend + District FE + Weather Residuals,0.1313831930275391,1.0430394064060533,0.8433817233869337,124
+Groundnut,Chronological OOT (2010-2013),Persistence Baseline,Lag-1 Identity (Y_t = Y_{t-1}),Yield_Lag_1,0.36707019153152975,0.746829981400772,0.5505264099601737,122
+Groundnut,Naive Leaky 5-Fold CV (1998-2013),Leaky Cross-Validation (Shuffled Years),"Random Forest (100 trees, depth=6)",Lag_Avg + Climate + Soil,0.31963979949607424,0.8298767112760596,0.40775054042718784,454
+Groundnut,Chronological OOT (2010-2013),V2 Production Baseline,HistGradientBoosting (Canonical V2),Lag_Avg + Climate + Soil,0.1508021604476797,0.8650643400864365,0.6307185797706633,122
+Groundnut,Chronological OOT (2010-2013),Enhanced Multi-Lag Framework,Random Forest (Lag-1 + Lag-Avg),Lag-1 + Lag-Avg + Climate + Soil + Year,0.3614340831585865,0.7501477945297005,0.5407044129873109,122
+Groundnut,Chronological OOT (2010-2013),Two-Stage Trend + Residual GBDT,Huber Trend + RF Weather Residuals,State Trend + District FE + Weather Residuals,-0.18904685326737258,1.023631055860195,0.8168806195290194,122
+Sugarcane,Chronological OOT (2010-2013),Persistence Baseline,Lag-1 Identity (Y_t = Y_{t-1}),Yield_Lag_1,-0.5097549435071402,19.261615691948492,14.83874238641105,122
+Sugarcane,Naive Leaky 5-Fold CV (1998-2013),Leaky Cross-Validation (Shuffled Years),"Random Forest (100 trees, depth=6)",Lag_Avg + Climate + Soil,0.2152960188438361,20.911004149362597,12.947600539803375,447
+Sugarcane,Chronological OOT (2010-2013),V2 Production Baseline,Random Forest (Canonical V2),Lag_Avg + Climate + Soil,0.08479175356957946,15.051832936435089,11.112430827534965,121
+Sugarcane,Chronological OOT (2010-2013),Enhanced Multi-Lag Framework,Ridge (Lag-1 + Lag-Avg),Lag-1 + Lag-Avg + Climate + Soil + Year,0.10681484151420628,14.869630476256724,11.305871864847443,121
+Sugarcane,Chronological OOT (2010-2013),Two-Stage Trend + Residual GBDT,Huber Trend + RF Weather Residuals,State Trend + District FE + Weather Residuals,-0.07008504791137415,16.27565872914989,11.632371205438153,121
+Maize,Chronological OOT (2010-2013),Persistence Baseline,Lag-1 Identity (Y_t = Y_{t-1}),Yield_Lag_1,-0.7106817180540956,2.1895842528534057,1.8566930041891943,113
+Maize,Naive Leaky 5-Fold CV (1998-2013),Leaky Cross-Validation (Shuffled Years),"Random Forest (100 trees, depth=6)",Lag_Avg + Climate + Soil,0.5171107899346117,1.3871779589096207,1.0299076642816576,342
+Maize,Chronological OOT (2010-2013),V2 Production Baseline,GradientBoosting (Canonical V2),Lag_Avg + Climate + Soil,0.03875423026953151,1.641323829200491,1.3332654530579393,113
+Maize,Chronological OOT (2010-2013),Enhanced Multi-Lag Framework,HistGradientBoosting (Lag-1 + Lag-Avg),Lag-1 + Lag-Avg + Climate + Soil + Year,0.0421611112604795,1.6384126286581069,1.3428254433911775,113
+Maize,Chronological OOT (2010-2013),Two-Stage Trend + Residual GBDT,Huber Trend + RF Weather Residuals,State Trend + District FE + Weather Residuals,-1.1124675692082966,2.4331679046067456,2.0579329451979875,113
+Cotton(lint),Chronological OOT (2010-2013),Persistence Baseline,Lag-1 Identity (Y_t = Y_{t-1}),Yield_Lag_1,-0.9357196135571664,1.0725440784993423,0.842431631542927,113
+Cotton(lint),Naive Leaky 5-Fold CV (1998-2013),Leaky Cross-Validation (Shuffled Years),"Random Forest (100 trees, depth=6)",Lag_Avg + Climate + Soil,0.3541937173018367,0.6385389218497011,0.49718058785959923,427
+Cotton(lint),Chronological OOT (2010-2013),V2 Production Baseline,Ridge (alpha=10) (Canonical V2),Lag_Avg + Climate + Soil,-0.1820736041817621,0.8381392594687557,0.6877202195189543,113
+Cotton(lint),Chronological OOT (2010-2013),Enhanced Multi-Lag Framework,Random Forest (Lag-1 + Lag-Avg),Lag-1 + Lag-Avg + Climate + Soil + Year,-0.10164859018819938,0.80912471251538,0.6559621071010343,113
+Cotton(lint),Chronological OOT (2010-2013),Two-Stage Trend + Residual GBDT,Huber Trend + RF Weather Residuals,State Trend + District FE + Weather Residuals,-0.735539873754087,1.0155731776928256,0.8278726077647475,113
